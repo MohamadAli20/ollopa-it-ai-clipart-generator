@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <title>Fibei Clipart</title>
+    <link rel="stylesheet" href="ai-clipart-stylesheet.css"> <!--Stylesheet is not made pa--> 
+    <link rel="icon" type="image/x-icon" href="Images/icon.ico"> <!--This is just filler--> 
+</head>
+<body>
+    <h1>AI Clipart Generator</h1>
+
+    <!--USER INPUT FORM-->
+    <form name="generator-form" action="{{ url_for('user_input')}}" method="post">
+
+        <!--PROMPT OR DESCRIPTION FOR DESIRED OUTPUT-->
+        <label for="prompt">Description:</label><br>
+        <textarea name="prompt" id="prompt" rows="4" cols="60">Clipart style of a </textarea> <br><br>
+
+        <!--NUMBER OF OUTPUT; MINIMUM OF 1, MAXIMUM OF 10-->
+        <label for="no-output">No. of Results:</label>
+        <input name="no_output" type="number" id="no_output"  min="1" max="10"><br><br>
+
+        <!--SIZE SELECTION-->
+        <label for="size">Size:</label>
+        <select name="size" id="size" >
+        <option value="small">Small 256x256 px</option>
+        <option value="medium" >Medium 512x512 px</option>
+        <option value="large">Large 1024x1024 px</option> </select><br><br>
+        
+        <input type="submit" value="Generate">
+        <button type="button" form="generator-form" formmethod="post">GENERATE</button>
+        <!-- Two types of buttons idk which is much better gamitin if yung submit or button--> 
+    </form>
+
+    <!-- DISPLAY GENERATED IMAGE -->
+    <img src="{{ image_url }}" alt="Generated image">
+</body>
+</html>
