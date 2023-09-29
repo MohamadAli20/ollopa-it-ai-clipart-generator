@@ -8,7 +8,7 @@ In VS Code, open the folder of your project, select terminal and then command pr
 type: python -m venv env
 3. Activate a virtual environment based on your OS
 For windows > venv\Scripts\activate
-For linux > source ./venv/bin/activate
+And, for linux > source ./venv/bin/activate
 
 # Install flask using pip install flask
 # Install openai using pip install openai
