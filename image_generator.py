@@ -9,7 +9,7 @@ import openai
 app = Flask (__name__, template_folder='template')
 
 #--MAIN CLIPART GENERATOR VIA OPENAI API KEY--
-openai.api_key = "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" #API Key from Shyra's Account user_prompt = "clipart style of a "+p #input prompt or description of desired output
+openai.api_key = "<input-api-key-here>"
 
 # defines the root route for the application
 @app.route('/', methods = ['GET', 'POST'])
